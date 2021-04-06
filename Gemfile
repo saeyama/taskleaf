@@ -60,6 +60,7 @@ group :test do
   # gem 'chromedriver-helper'
   gem 'webdrivers', '~> 4.0'
   gem 'rspec-rails', '~> 3.7'  
+  gem 'simplecov'
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
