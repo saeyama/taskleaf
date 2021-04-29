@@ -13,8 +13,19 @@ class TasksController < ApplicationController
     @task = Task.new
   end
 
+  def confirm_new
+    @task = current_user.tasks.new(task_params)
+    render :new unless @task.valid?
+  end
+
   def create
     @task = current_user.tasks.new(task_params)
+
+    if params[:back].present?
+      render :new
+      return
+    end
+    
     # binding.pry
     if @task.save
       logger.debug "task: #{@task.attributes.inspect}"
@@ -29,12 +40,13 @@ class TasksController < ApplicationController
 
   def update
     @task.update!(task_params)
-    redirect_to tasks_url, notice: "タスク「#{task.name}」を更新しました。"
+    redirect_to tasks_url, notice: "タスク「#{@task.name}」を更新しました。"
   end
 
   def destroy
+    @task = Task.find(params[:id])
     @task.destroy
-    redirect_to tasks_url, notice: "タスク「#{task.name}」を削除しました。"
+    redirect_to tasks_url, notice: "タスク「#{@task.name}」を削除しました。"
   end
 
   private
