@@ -61,6 +61,8 @@ Rails.application.configure do
   # routes, locales, etc. This feature depends on the listen gem.
   config.file_watcher = ActiveSupport::EventedFileUpdateChecker
 
+  config.active_job.queue_adapter = :sidekiq
+
   # config.logger.formatter = prop{ |severity, timestamp, progname, message|
   #   "#{timestamp} :#{severity} :#{message}\n"
   # }
