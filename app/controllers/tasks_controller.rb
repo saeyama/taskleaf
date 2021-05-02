@@ -34,7 +34,8 @@ class TasksController < ApplicationController
     
     # binding.pry
     if @task.save
-      logger.debug "task: #{@task.attributes.inspect}"
+      TaskMailer.creation_email(@task).deliver_now
+      # logger.debug "task: #{@task.attributes.inspect}"
       redirect_to @task, notice: "タスク「#{@task.name}」を登録しました。"
     else
       render :new
