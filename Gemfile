@@ -83,4 +83,5 @@ gem "mimemagic", "~> 0.3.10"
 
 gem 'ransack'
 
+gem 'kaminari'
 
