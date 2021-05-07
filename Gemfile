@@ -85,5 +85,7 @@ gem 'ransack'
 
 gem 'kaminari'
 
-gem 'sidekiq', '~> 5.0'
+gem 'sidekiq', '~> 5.0'  
+
+gem 'webpacker'
 

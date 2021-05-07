@@ -63,7 +63,7 @@ class TasksController < ApplicationController
 
   def destroy
     @task.destroy
-    head :no_content
+    # head :no_content
     #:no_contentなくても動作するがわかりやすいように明示。
   end
 
