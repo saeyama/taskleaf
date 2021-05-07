@@ -87,5 +87,5 @@ gem 'kaminari'
 
 gem 'sidekiq', '~> 5.0'  
 
-gem 'webpacker'
+gem 'webpacker', '~> 3.5'
 
