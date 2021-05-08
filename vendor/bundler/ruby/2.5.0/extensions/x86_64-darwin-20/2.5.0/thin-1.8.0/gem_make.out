@@ -1,0 +1,21 @@
+current directory: /Users/saekoyamada/Documents/taskleaf/vendor/bundler/ruby/2.5.0/gems/thin-1.8.0/ext/thin_parser
+/Users/saekoyamada/.rbenv/versions/2.5.1/bin/ruby -I /Users/saekoyamada/.rbenv/versions/2.5.1/lib/ruby/site_ruby/2.5.0 -r ./siteconf20210502-5673-1wggfvi.rb extconf.rb
+checking for main() in -lc... yes
+creating Makefile
+
+current directory: /Users/saekoyamada/Documents/taskleaf/vendor/bundler/ruby/2.5.0/gems/thin-1.8.0/ext/thin_parser
+make DESTDIR\= clean
+
+current directory: /Users/saekoyamada/Documents/taskleaf/vendor/bundler/ruby/2.5.0/gems/thin-1.8.0/ext/thin_parser
+make DESTDIR\=
+compiling parser.c
+parser.c:31:18: warning: unused variable 'http_parser_en_main' [-Wunused-const-variable]
+static const int http_parser_en_main = 1;
+                 ^
+1 warning generated.
+compiling thin.c
+linking shared-object thin_parser.bundle
+
+current directory: /Users/saekoyamada/Documents/taskleaf/vendor/bundler/ruby/2.5.0/gems/thin-1.8.0/ext/thin_parser
+make DESTDIR\= install
+/usr/bin/install -c -m 0755 thin_parser.bundle ./.gem.20210502-5673-1yjnx1g
